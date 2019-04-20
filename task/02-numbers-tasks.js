@@ -223,7 +223,7 @@ function isPrime(n) {
  *   toNumber(new Number(42), 0) => 42
  */
 function toNumber(value, def) {
-    return $.isNumeric(value) ? parseInt(value, 10) : def;
+    return (!isNaN(parseFloat(value)) && isFinite(value)) ? parseInt(value, 10) : def;
 }
 
 module.exports = {
