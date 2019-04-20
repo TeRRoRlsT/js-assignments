@@ -242,8 +242,8 @@ function encodeToRot13(str) {
  *   isString('test') => true
  *   isString(new String('test')) => true
  */
-function isString(value) {
-    return value === '';
+function isString (value) {
+    return value === '' || value instanceof String;
 }
 
 
