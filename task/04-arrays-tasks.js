@@ -38,11 +38,7 @@ function findElement(arr, value) {
  *    5 => [ 1, 3, 5, 7, 9 ]
  */
 function generateOdds(len) {
-    let arr = [];
-    for (let i=0; i<len; i++) {
-      arr.push(2*i + 1);
-    }
-    return arr;
+    return Array.from({length: len}, (elem, index) => (index * 2) +1);
 }
 
 
@@ -551,7 +547,7 @@ function selectMany(arr, childrenSelector) {
  *   [[[ 1, 2, 3]]], [ 0, 0, 1 ]      => 2        (arr[0][0][1])
  */
 function getElementByIndexes(arr, indexes) {
-    throw new Error('Not implemented');
+   return indexes.map(elem => arr = arr[elem])[indexes.length - 1];
 }
 
 
@@ -574,7 +570,11 @@ function getElementByIndexes(arr, indexes) {
  * 
  */
 function swapHeadAndTail(arr) {
-    throw new Error('Not implemented');
+   const tail = arr.slice(Math.ceil(arr.length / 2), arr.length);
+   const mid = arr.slice(Math.floor(arr.length / 2), Math.ceil(arr.length / 2));
+   const head = arr.slice(0, Math.floor(arr.length / 2));
+
+   return tail.concat(mid).concat(head);
 }
 
 
