@@ -1,3 +1,23 @@
+Skip to content
+ 
+Search or jump to…
+
+Pull requests
+Issues
+Marketplace
+Explore
+ 
+@TeRRoRlsT 
+0
+0 1,257 GermanPodlesskiy/js-assignments
+forked from rolling-scopes-school/js-assignments
+ Code  Pull requests 0  Projects 0  Wiki  Insights
+js-assignments/task/05-regex-tasks.js
+@GermanPodlesskiy GermanPodlesskiy 05-regex-tasks comleted.
+34ff238 on 13 Mar
+@quozd @GermanPodlesskiy @demns
+133 lines (119 sloc)  4.18 KB
+  
 'use strict';
 
 /********************************************************************************************
@@ -31,7 +51,7 @@
  * @return {RegExp}
  */
 function getRegexForGuid() {
-   throw new Error('Not implemented');
+   return /^\{[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}\}/i;
 }
 
 
@@ -53,7 +73,7 @@ function getRegexForGuid() {
  *
  */
 function getRegexForPitSpot() {
-   throw new Error('Not implemented');
+   return /^(pi|s|r).+$/;
 }
 
 
@@ -72,7 +92,8 @@ function getRegexForPitSpot() {
  * @return {RegExp}
  */
 function getRegexForIPv4() {
-   throw new Error('Not implemented');
+   const uint8 = '(0?0?[0-9]|0?[1-9][0-9]|1[0-9][0-9]|2[0-4][0-9]|25[0-5])';
+   return new RegExp(`^(${uint8}\.){3}${uint8}$`);
 }
 
 
@@ -91,7 +112,7 @@ function getRegexForIPv4() {
  * @return {RegExp}
  */
 function getRegexForSSN() {
-   throw new Error('Not implemented');
+   return /^(?!000)\d{3}-(?!00)\d{2}-(?!0000)\d{4}$/;
 }
 
 
@@ -116,7 +137,9 @@ function getRegexForSSN() {
  *   'Pa55'.match(validator) => false
  */
 function getPasswordValidator(minLength) {
-   throw new Error('Not implemented');
+   return new RegExp(
+      `^(?=[0-9A-Za-z]{${minLength},})(?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])`
+   );
 }
 
 
@@ -127,3 +150,15 @@ module.exports = {
     getRegexForSSN: getRegexForSSN,
     getPasswordValidator: getPasswordValidator
 };
+© 2019 GitHub, Inc.
+Terms
+Privacy
+Security
+Status
+Help
+Contact GitHub
+Pricing
+API
+Training
+Blog
+About
