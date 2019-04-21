@@ -67,7 +67,7 @@ function* getFibonacciSequence() {
     while (true) {
         yield a + b;
         b += a;
-        a = b;
+        a = b - a;
     }
 }
 
