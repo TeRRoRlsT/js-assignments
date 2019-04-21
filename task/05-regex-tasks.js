@@ -1,23 +1,3 @@
-Skip to content
- 
-Search or jump to…
-
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@TeRRoRlsT 
-0
-0 1,257 GermanPodlesskiy/js-assignments
-forked from rolling-scopes-school/js-assignments
- Code  Pull requests 0  Projects 0  Wiki  Insights
-js-assignments/task/05-regex-tasks.js
-@GermanPodlesskiy GermanPodlesskiy 05-regex-tasks comleted.
-34ff238 on 13 Mar
-@quozd @GermanPodlesskiy @demns
-133 lines (119 sloc)  4.18 KB
-  
 'use strict';
 
 /********************************************************************************************
@@ -150,15 +130,3 @@ module.exports = {
     getRegexForSSN: getRegexForSSN,
     getPasswordValidator: getPasswordValidator
 };
-© 2019 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Help
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
